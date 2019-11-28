@@ -1,0 +1,46 @@
+
+<div class="carrito" *ngIf="bandera">
+  <div class="card-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Quitar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let remera of remeras">
+          <th scope="row">{{remera.nombre}}</th>
+          <td><img src="assets/{{remera.imagen}}" width="60px" alt="..."></td>
+          <th scope="row">${{remera.precio}}</th>
+          <td scope="col"><button class="boton" (click)="eliminar(remera)">x</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+    <div class="pie-tabla">
+      <p class="card-text">Seguir mirando nuestro <a routerLink="/remeras">Catalogo</a></p>
+    </div>
+ 
+
+    <div class="card total">
+      <div class="card-body tarjeta-total">
+          <h5 class="card-title">Total a pagar</h5>
+          <h5 class="card-text">${{total}}</h5>
+          <button class="btn btn-success btn-block btn-pagar" (click)="pagar()">Finalizar compra</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="card noHay" *ngIf="!bandera">
+  <div class="card-body">
+      <h5 class="card-title">El carrito esta vacio</h5>
+      <p class="card-text">Seguir mirando nuestro <a routerLink="/remeras">Catalogo</a></p>
+      
+  </div>
+</div>

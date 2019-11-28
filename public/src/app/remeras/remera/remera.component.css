@@ -1,0 +1,29 @@
+.card{
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.enlace{
+    text-align: right;
+    border: none; 
+}
+
+
+.btn-success{
+    transition: 0.6s;
+    background-color: #3e4493;
+    border: none;
+    background-size: 200%;
+    /* background-image: linear-gradient(to left,#3e4493,#07aaeb,#3e4493 ); */
+}
+
+.btn-success:hover{
+    background-position: right;
+}
+
+.btn-carrito{
+    /* background-color: #007bff; */
+    border: none;
+    color: white;
+    background-color: #07aaeb;
+}
